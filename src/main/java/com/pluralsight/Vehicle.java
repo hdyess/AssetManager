@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.time.LocalDateTime;
+
 public class Vehicle extends Asset{
 
 	private String makeModel;
@@ -46,7 +48,17 @@ public class Vehicle extends Asset{
 
 	@Override
 	public double getValue() {
-		return 0; 
+
+		int carAge = LocalDateTime.now().getYear() - this.year;
+		double depreciationMultiplier = 1.0;
+
+		depreciationMultiplier -= (n) -> {
+			return 2*n;
+		};
+
+
+		return 0;
+
 	}
 
 
