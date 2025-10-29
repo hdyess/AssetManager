@@ -13,17 +13,20 @@ public class Main {
 		assets.add(new Vehicle("Moped", "2024-09-30", 5_000.00, "Vespa Elettrica 45", 2022, 8_038));
 
 		for (Asset a: assets) {
-			if (a instanceof Vehicle) {
-				Vehicle v = (Vehicle) a;
+			if (a instanceof Vehicle v) {
 				System.out.println(v.toString() + " Year-Make-Model: " + v.getYear() + " " + v.getMakeModel());
-			} else if (a instanceof House) {
-				House h = (House) a;
+			} else if (a instanceof House h) {
 				System.out.println(h.toString() + " Address: " + h.getAddress());
 			} else {
 				System.out.println(a);
 			}
 		}
 
-	}
-}
+
+
+	} // main
+
+
+
+} // Main
 
