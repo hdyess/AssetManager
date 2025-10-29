@@ -47,7 +47,6 @@ public class Vehicle extends Asset{
 	}
 
 
-	@Override
 	public double getValue() {
 
 		int carAge = LocalDateTime.now().getYear() - this.year;

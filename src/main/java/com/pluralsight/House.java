@@ -53,7 +53,6 @@ public class House extends Asset {
 		this.lotSize = lotSize;
 	}
 
-	@Override
 	public double getValue() {
 		return (squareFoot * new int[]{180, 130, 90, 80}[condition-1]) + (.25 * lotSize);
 	}
