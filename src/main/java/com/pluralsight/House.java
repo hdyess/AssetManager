@@ -55,7 +55,12 @@ public class House extends Asset {
 
 	@Override
 	public double getValue() {
-		return (squareFoot * new int[]{80, 90, 130, 180}[condition-1]) + (.25 * lotSize);
+		return (squareFoot * new int[]{180, 130, 90, 80}[condition-1]) + (.25 * lotSize);
+	}
+
+	@Override
+	public String toString() {
+		return this.getDescription() + " purchased on " + this.getDateAcquired() + " for " + this.getOriginalCost() + "USD.";
 	}
 
 
